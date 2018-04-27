@@ -7,6 +7,7 @@ This repo provides an opinionated template for getting up and running with React
 * Typescript
 * Jest (with coverage and junit reports for your CI)
 * Linting against Airbnb's famous standard
+* A logger capable of being extended to multiple transports 
 
 ## Getting Started
 ### Serve
