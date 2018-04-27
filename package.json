@@ -10,16 +10,29 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "ci:test": "cross-env CI=true npm test",
+    "test": "jest --config jest.config.js --env=jsdom",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts-ts eject"
+  },
+  "jest-junit": {
+    "output": "./reports/tests/junit/junit.xml",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "usePathForSuiteName": "true"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
     "@types/node": "^9.6.7",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
+    "babel-jest": "^22.4.3",
     "cross-env": "^5.1.4",
+    "jest": "^22.4.3",
+    "jest-css": "^1.0.1",
+    "jest-file": "^1.0.0",
+    "jest-junit": "^3.7.0",
+    "ts-jest": "^22.4.4",
     "typescript": "^2.8.3"
   }
 }

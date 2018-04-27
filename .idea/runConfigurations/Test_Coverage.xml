@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Test" type="JavaScriptTestRunnerJest" factoryName="Jest">
+  <configuration default="false" name="Test Coverage" type="JavaScriptTestRunnerJest" factoryName="Jest">
     <config-file value="$PROJECT_DIR$/jest.config.js" />
     <node-interpreter value="project" />
     <node-options value="" />
     <working-dir value="$PROJECT_DIR$" />
-    <jest-options value="--env=jsdom" />
+    <jest-options value="--env=jsdom --coverage" />
     <envs />
     <scope-kind value="ALL" />
     <method />

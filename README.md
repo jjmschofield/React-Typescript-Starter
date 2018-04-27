@@ -15,22 +15,21 @@ $ npm run build
 ```
 
 ## Unit Test
+To run the tests:
 ```
 $ npm test
 ```
-This will by default run tests with a watch.
 
-By default `Jest` will only run tests which have changed or may be impacted by a change since the last commit.
-
-To run all tests do:
+To run the tests with coverage:
 ```
-$ npm test a
+$ npm test:coverage
 ```
 
-To run all tests without a watch do:
+To run the tests with a watch:
 ```
-$ npm run ci:test
+$ npm test:watch
 ```
+Note, by default `Jest` will only run tests which have changed or may be impacted by a change since the last commit when using a watch.
 
 ## Opinions
 ### `npm` and not `yarn`
@@ -48,6 +47,10 @@ employed to provide as consistent a development experience across IDE's as possi
 ### Webstorm Support
 Webstorm is a fantastic IDE once learned which includes killer features such as simplified and safe reactors as well 
 as in IDE coverage and test runners.
+
+When using Webstorm you will find that you have common tasks available to you in the top right and will not need to use the CLI.
+
+You'll also find that there is a handy 'Debug' task to attach the debugger. 
 
 ### VS Code Support (help needed)
 VS Code is also awesome, and a pull request to add some solid VS Code defaults would be very welcome.
