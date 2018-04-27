@@ -10,7 +10,8 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "jest --config jest.config.js --env=jsdom",
+    "lint": "tslint src/**/*",
+    "test": "npm run lint && jest --config jest.config.js --env=jsdom",
     "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts-ts eject"
@@ -33,6 +34,7 @@
     "jest-file": "^1.0.0",
     "jest-junit": "^3.7.0",
     "ts-jest": "^22.4.4",
+    "tslint-config-airbnb": "^5.8.0",
     "typescript": "^2.8.3"
   }
 }
