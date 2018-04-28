@@ -13,7 +13,7 @@ export class ConsoleTransport implements ILoggerTransport {
   log(log: Log, level: LOG_LEVEL) {
     if (level <= this.logLevel) {
       const logMethod = getLogMethod(level);
-      logMethod(getformatedMessage(log), log.payload);
+      logMethod(getFormattedMessage(log), log.payload);
     }
   }
 }
@@ -26,6 +26,6 @@ const getLogMethod = (level: LOG_LEVEL) => {
   return console.debug;
 };
 
-const getformatedMessage = (log:Log) => {
+const getFormattedMessage = (log:Log) => {
   return `${format(log.payload.timestamp)} - ${log.message}`;
 };
