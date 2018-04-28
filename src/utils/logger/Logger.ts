@@ -13,8 +13,8 @@ export class Logger {
   info: (message: string, data?:object) => void;
   debug: (message: string, data?:object) => void;
 
-  constructor(transports: ILoggerTransport[]) {
-    this.transports = transports;
+  constructor(transports?: ILoggerTransport[]) {
+    this.transports = transports || [];
     this.attachLogLevelWrappers();
   }
 

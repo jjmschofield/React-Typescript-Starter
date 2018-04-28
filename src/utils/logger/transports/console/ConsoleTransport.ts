@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
-import { ILoggerTransport } from './ILoggerTransport';
-import { LOG_LEVEL } from '../LOG_LEVEL';
-import { Log } from '../Log';
+import { ILoggerTransport } from '../ILoggerTransport';
+import { LOG_LEVEL } from '../../LOG_LEVEL';
+import { Log } from '../../Log';
 
 export class ConsoleTransport implements ILoggerTransport {
   private logLevel: LOG_LEVEL;
@@ -16,6 +16,15 @@ export class ConsoleTransport implements ILoggerTransport {
       logMethod(getFormattedMessage(log), log.payload);
     }
   }
+
+  getLogLevel() {
+    return this.logLevel;
+  }
+
+  setLogLevel(level: LOG_LEVEL) {
+    this.logLevel = level;
+    return this.getLogLevel();
+  }
 }
 
 const getLogMethod = (level: LOG_LEVEL) => {
@@ -26,6 +35,6 @@ const getLogMethod = (level: LOG_LEVEL) => {
   return console.debug;
 };
 
-const getFormattedMessage = (log:Log) => {
+const getFormattedMessage = (log: Log) => {
   return `${format(log.payload.timestamp)} - ${log.message}`;
 };

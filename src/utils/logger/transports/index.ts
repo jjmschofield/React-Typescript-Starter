@@ -1,1 +1,1 @@
-export { ConsoleTransport } from './ConsoleTransport';
+export { ConsoleTransport } from './console/ConsoleTransport';
