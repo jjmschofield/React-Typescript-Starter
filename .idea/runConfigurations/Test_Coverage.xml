@@ -1,12 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Test Coverage" type="JavaScriptTestRunnerJest" factoryName="Jest">
-    <config-file value="$PROJECT_DIR$/jest.config.js" />
+  <configuration default="false" name="test:coverage" type="js.build_tools.npm" factoryName="npm" nameIsGenerated="true">
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="test:coverage" />
+    </scripts>
     <node-interpreter value="project" />
-    <node-options value="" />
-    <working-dir value="$PROJECT_DIR$" />
-    <jest-options value="--env=jsdom --coverage" />
     <envs />
-    <scope-kind value="ALL" />
     <method />
   </configuration>
 </component>
