@@ -32,7 +32,7 @@ export class Logger {
 
   log(level: LOG_LEVEL, message: string, data?: object) {
     this.transports.forEach((transport) => {
-      const log = new Log(message, data);
+      const log = new Log(message, level, data);
       transport.log(log, level);
     });
   }

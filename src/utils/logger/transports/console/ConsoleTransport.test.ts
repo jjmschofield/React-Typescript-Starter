@@ -27,7 +27,7 @@ describe('src/utils/logger/transports/ConsoleTransport.ts', () => {
       beforeEach(() => {
         underTest = new ConsoleTransport(LOG_LEVEL.DEBUG);
         expectedLogData = { someKey: 'some value' };
-        expectedLog = new Log('some message', expectedLogData);
+        expectedLog = new Log('some message', LOG_LEVEL.DEBUG, expectedLogData);
         expectedLog.payload.timestamp = 0;
         expectedConsoleMessage =
           `${format(expectedLog.payload.timestamp)} - ${expectedLog.message}`;
@@ -98,7 +98,7 @@ describe('src/utils/logger/transports/ConsoleTransport.ts', () => {
       });
 
       it('should not log', () => {
-        const log = new Log('some log message');
+        const log = new Log('some log message', LOG_LEVEL.DEBUG);
         underTest.log(log, LOG_LEVEL.DEBUG);
         expect(consoleMock.debug).not.toBeCalled();
       });
